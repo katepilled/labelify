@@ -1,0 +1,18 @@
+.login-button {
+  background-color: #1ed760 !important;
+  color: white;
+  width: 200px;
+}
+
+.login-button:hover {
+  background-color: #1ac255 !important;
+}
+
+.time-button {
+  background-color: #1ed760 !important;
+  width: 160px;
+}
+
+.time-button:hover {
+  background-color: #1ac255 !important;
+}
