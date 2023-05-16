@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Header = ({ isLoggedIn }) => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <a className="navbar-brand ms-4">
+      <a className="navbar-brand ms-4" href="/">
         label.ify
       </a>
       <div className="d-flex pe-2">
