@@ -3,6 +3,11 @@ import "../styles/buttons.css";
 import { Link } from "react-router-dom";
 
 const Home = ({ isLoggedIn }) => {
+  const LOGIN_URI =
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:8888/login'
+    : 'https://labelify-app.herokuapp.com/login';
+
 
   return (
     <div>
@@ -21,7 +26,7 @@ const Home = ({ isLoggedIn }) => {
           ) : (
             <a
               class="btn btn-lg login-button"
-              href="http://localhost:8888/login"
+              href={LOGIN_URI}
             >
               login to spotify
             </a>
