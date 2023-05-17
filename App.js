@@ -2,7 +2,10 @@ require("dotenv").config();
 const express = require("express");
 const querystring = require("querystring");
 const axios = require("axios");
+const path = require('path');
+
 const app = express();
+app.use(express.static(path.resolve(__dirname, '../build')));
 
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
@@ -70,7 +73,8 @@ app.get("/callback", (req, res) => {
           expires_in,
         });
 
-        res.redirect(`${FRONTEND_URI}?${queryParams}`);
+        res.redirect(`${FRONTEND_URI}/?${queryParams}`);
+        
       } else {
         res.redirect(`/?${querystring.stringify({ error: "invalid_token" })}`);
       }
@@ -81,5 +85,10 @@ app.get("/callback", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../build', 'index.html'));
 });

@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 
 const Home = ({ isLoggedIn }) => {
   const LOGIN_URI =
-    process.env.NODE_ENV !== "production"
-      ? "http://localhost:8888/login"
-      : "https://labelify-app.herokuapp.com/login";
+        
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:8888/login'
+    : 'https://labelify-app.herokuapp.com/login';
 
   return (
     <div>
@@ -23,7 +24,10 @@ const Home = ({ isLoggedIn }) => {
               </Link>
             </div>
           ) : (
-            <a class="btn btn-lg login-button" href={LOGIN_URI}>
+            <a
+              class="btn btn-lg login-button"
+              href={LOGIN_URI}
+            >
               login to spotify
             </a>
           )}
