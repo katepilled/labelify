@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const Home = ({ isLoggedIn }) => {
   const LOGIN_URI =
+        
   process.env.NODE_ENV !== 'production'
     ? 'http://localhost:8888/login'
     : 'https://labelify-app.herokuapp.com/login';
-
 
   return (
     <div>
@@ -35,6 +35,6 @@ const Home = ({ isLoggedIn }) => {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

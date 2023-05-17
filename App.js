@@ -74,6 +74,7 @@ app.get("/callback", (req, res) => {
         });
 
         res.redirect(`${FRONTEND_URI}/?${queryParams}`);
+        
       } else {
         res.redirect(`/?${querystring.stringify({ error: "invalid_token" })}`);
       }
@@ -83,7 +84,6 @@ app.get("/callback", (req, res) => {
     });
 });
 
-const port = 8888;
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
