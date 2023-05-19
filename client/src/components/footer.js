@@ -4,7 +4,7 @@ import '../styles/footer.css'
 
 function Footer() {
   return (
-    <footer class="text-center text-lg-start bg-light text-muted">
+    <footer class="text-center text-lg-start text-muted">
       <section class="d-flex justify-content-center justify-content-lg-between p-3 border-top">
         <div class="d-none d-lg-block">
           <span>created by kate yoon ★</span>

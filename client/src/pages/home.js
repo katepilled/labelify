@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/buttons.css";
+import "../styles/footer.css"
 import { Link } from "react-router-dom";
 
 const Home = ({ isLoggedIn }) => {
@@ -9,7 +10,7 @@ const Home = ({ isLoggedIn }) => {
       : "https://labelify-app.herokuapp.com/login";
 
   return (
-    <div>
+    <div className="home-container">
       <div class="d-flex flex-column align-items-center my-5">
         <h1 class="text-center mb-3">welcome to label.ify!</h1>
         <div>
