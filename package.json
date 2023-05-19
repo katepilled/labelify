@@ -1,7 +1,7 @@
 
   {
   "name": "label.ify",
-  "main": "app.js",
+  "main": "App.js",
   
   "engines": {
     "node": "18.13.0"
@@ -14,11 +14,11 @@
 
   "scripts": {
     "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "server": "nodemon app.js",
+    "server": "nodemon App.js",
     "client": "cd client && npm start",
     "postinstall": "cd client && npm install",
     "build": "NODE_ENV=production cd client/ && npm install && npm run build",
-    "start-server": "node app.js"
+    "start-server": "node App.js"
   },
 
   "dependencies": {
